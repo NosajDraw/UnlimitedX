@@ -76,6 +76,10 @@ metallurgyTeirSix.addAll(Tartarite);
 // Make silicons equal
 <ore:itemSilicon>.add(<ProjRed|Core:projectred.core.part:12>);
 
+// Make lapis nuggest and shards the same thing
+// <ore:nuggetsLapis>.addAll(<ore:shardLapis>);
+// <ore:shardLapis>.mirror(<ore:nuggetsLapis>);
+
 // Make oreDict for certus quartz crystals
 val aeCertusQuartz = <ore:aeCertusQuartz>;
 aeCertusQuartz.add(<appliedenergistics2:item.ItemMultiMaterial>);
@@ -459,5 +463,18 @@ recipes.addShaped(<gendustry:Labware>, [
 
 // Sausepan - remove one it's recipes as it clashes with architects chisel from architecture craft
 recipes.removeShaped(<harvestcraft:saucepanItem>, [[<ore:ingotIron>, null], [<ore:stickWood>, null]]);
+
+// **********************************
+// Solar Expandsion
+
+// Photovoltic cell - alolow use of lapis niggest and shards
+recipes.remove(<SolarExpansion:photovoltaicCell>);
+recipes.addShaped(<SolarExpansion:photovoltaicCell>, [
+	[<ore:paneGlass>, <ore:paneGlass>, <ore:paneGlass>],
+	[<ore:nuggetsLapis>, <ore:nuggetsLapis>, <ore:nuggetsLapis>],
+	[<ore:nuggetIron>, <ore:nuggetIron>, <ore:nuggetIron>]
+]);
+
+
 
 print("MetallurgyInt END");
