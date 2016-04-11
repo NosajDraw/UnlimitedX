@@ -256,9 +256,9 @@ recipes.addShaped(<ThermalExpansion:Frame:6>, [
 // Basic Machine Casing
 recipes.remove(<IC2:blockMachine>);
 recipes.addShaped(<IC2:blockMachine>, [
-	[<ore:plateiron>, <ore:plateiron>, DamascusSteel],
-	[<ore:plateiron>, DamascusSteel, <ore:plateiron>],
-	[DamascusSteel, <ore:plaTieron>, <ore:plateiron>]
+	[<ore:plateIron>, <ore:plateIron>, DamascusSteel],
+	[<ore:plateIron>, DamascusSteel, <ore:plateIron>],
+	[DamascusSteel, <ore:plateIron>, <ore:plateIron>]
 ]);
 // Allow AOBD Iridium to work
 recipes.removeShaped(<IC2:itemOreIridium>);
