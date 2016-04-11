@@ -48,37 +48,37 @@ poorGems.addAll(<ore:gemSapphire>);
 poorGems.addAll(<ore:gemPeridot>);
 poorGems.addAll(<ore:gemRuby>);
 
-// val metallurgyTeirOne = <ore:metallurgyTeirOne>;
+// val metallurgyTierOne = <ore:metallurgyTierOne>;
 
-val metallurgyTeirTwo = <ore:metallurgyTeirTwo>;
-metallurgyTeirTwo.addAll(Lemurite);
-metallurgyTeirTwo.addAll(Prometheum);
-metallurgyTeirTwo.addAll(DeepIron);
-metallurgyTeirTwo.addAll(Infuscolium);
-metallurgyTeirTwo.addAll(Ignatius);
-metallurgyTeirTwo.addAll(ShadowIron);
+val metallurgyTierTwo = <ore:metallurgyTierTwo>;
+metallurgyTierTwo.addAll(Lemurite);
+metallurgyTierTwo.addAll(Prometheum);
+metallurgyTierTwo.addAll(DeepIron);
+metallurgyTierTwo.addAll(Infuscolium);
+metallurgyTierTwo.addAll(Ignatius);
+metallurgyTierTwo.addAll(ShadowIron);
 
-// val metallurgyTeirThree = <ore:metallurgyTeirThree>;
-// val metallurgyTeirFour = <ore:metallurgyTeirFour>;
-// val metallurgyTeirFive = <ore:metallurgyTeirFive>;
+// val metallurgyTierThree = <ore:metallurgyTierThree>;
+// val metallurgyTierFour = <ore:metallurgyTierFour>;
+// val metallurgyTierFive = <ore:metallurgyTierFive>;
 
-val metallurgyTeirSix = <ore:metallurgyTeirSix>;
-metallurgyTeirSix.addAll(Vulcanite);
-metallurgyTeirSix.addAll(Sanguinite);
-metallurgyTeirSix.addAll(Orichalcum);
-metallurgyTeirSix.addAll(Celenegil);
-metallurgyTeirSix.addAll(Adamantine);
-metallurgyTeirSix.addAll(Atlarus);
-metallurgyTeirSix.addAll(Tartarite);
+val metallurgyTierSix = <ore:metallurgyTierSix>;
+metallurgyTierSix.addAll(Vulcanite);
+metallurgyTierSix.addAll(Sanguinite);
+metallurgyTierSix.addAll(Orichalcum);
+metallurgyTierSix.addAll(Celenegil);
+metallurgyTierSix.addAll(Adamantine);
+metallurgyTierSix.addAll(Atlarus);
+metallurgyTierSix.addAll(Tartarite);
 
 // val metallurgyIngots = <ore:metallurgyIngots>;
 
 // Make silicons equal
 <ore:itemSilicon>.add(<ProjRed|Core:projectred.core.part:12>);
 
-// Make lapis nuggest and shards the same thing
-// <ore:nuggetsLapis>.addAll(<ore:shardLapis>);
-// <ore:shardLapis>.mirror(<ore:nuggetsLapis>);
+// Make lapis nuggets and shards the same thing
+<ore:nuggetLapis>.addAll(<ore:shardLapis>);
+<ore:shardLapis>.mirror(<ore:nuggetLapis>);
 
 // Make oreDict for certus quartz crystals
 val aeCertusQuartz = <ore:aeCertusQuartz>;
@@ -135,7 +135,7 @@ mods.buildcraft.AssemblyTable.addRecipe(<Shards:scintillatingShard>,
 recipes.remove(<minecraft:piston>);
 recipes.addShaped(<minecraft:piston>, [
 	[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
-	[<ore:cobblestone>, metallurgyTeirTwo, <ore:cobblestone>],
+	[<ore:cobblestone>, metallurgyTierTwo, <ore:cobblestone>],
 	[<ore:cobblestone>, <ore:dustRedstone>, <ore:cobblestone>]
 ]);
 recipes.addShaped(<minecraft:piston>, [
@@ -256,9 +256,9 @@ recipes.addShaped(<ThermalExpansion:Frame:6>, [
 // Basic Machine Casing
 recipes.remove(<IC2:blockMachine>);
 recipes.addShaped(<IC2:blockMachine>, [
-	[<ore:plateIron>, <ore:plateIron>, DamascusSteel],
-	[<ore:plateIron>, DamascusSteel, <ore:plateIron>],
-	[DamascusSteel, <ore:plateIron>, <ore:plateIron>]
+	[<ore:plaTieron>, <ore:plaTieron>, DamascusSteel],
+	[<ore:plaTieron>, DamascusSteel, <ore:plaTieron>],
+	[DamascusSteel, <ore:plaTieron>, <ore:plaTieron>]
 ]);
 // Allow AOBD Iridium to work
 recipes.removeShaped(<IC2:itemOreIridium>);
@@ -361,9 +361,9 @@ val aeSkyStone = <appliedenergistics2:tile.BlockSkyStone>;
 // ME Controller
 recipes.remove(<appliedenergistics2:tile.BlockController>);
 recipes.addShaped(<appliedenergistics2:tile.BlockController>, [
-	[metallurgyTeirSix, aePureFluixCrystal, aeSkyStone],
+	[metallurgyTierSix, aePureFluixCrystal, aeSkyStone],
 	[aePureFluixCrystal, aeEngineering, aePureFluixCrystal],
-	[aeSkyStone, aePureFluixCrystal, metallurgyTeirSix]
+	[aeSkyStone, aePureFluixCrystal, metallurgyTierSix]
 ]);
 // Crafting unit
 recipes.remove(<appliedenergistics2:tile.BlockCraftingUnit>);
@@ -424,7 +424,7 @@ recipes.remove(<StorageDrawers:controllerSlave>);
 recipes.addShaped(<StorageDrawers:controllerSlave>, [
 	[<minecraft:stone>, <minecraft:stone>, <minecraft:stone>],
 	[<minecraft:comparator>, <ore:drawerBasic>, <minecraft:comparator>],
-	[aeSkyStone, metallurgyTeirTwo, aeSkyStone]
+	[aeSkyStone, metallurgyTierTwo, aeSkyStone]
 ]);
 // Creative infinite storage upgrade - Deep Storage Upgrade
 recipes.remove(<StorageDrawers:upgradeCreative>);
@@ -471,10 +471,8 @@ recipes.removeShaped(<harvestcraft:saucepanItem>, [[<ore:ingotIron>, null], [<or
 recipes.remove(<SolarExpansion:photovoltaicCell>);
 recipes.addShaped(<SolarExpansion:photovoltaicCell>, [
 	[<ore:paneGlass>, <ore:paneGlass>, <ore:paneGlass>],
-	[<ore:nuggetsLapis>, <ore:nuggetsLapis>, <ore:nuggetsLapis>],
+	[<ore:nuggetLapis>, <ore:nuggetLapis>, <ore:nuggetLapis>],
 	[<ore:nuggetIron>, <ore:nuggetIron>, <ore:nuggetIron>]
 ]);
-
-
 
 print("MetallurgyInt END");
