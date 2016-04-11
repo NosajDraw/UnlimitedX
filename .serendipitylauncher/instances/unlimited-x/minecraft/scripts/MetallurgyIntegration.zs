@@ -256,9 +256,9 @@ recipes.addShaped(<ThermalExpansion:Frame:6>, [
 // Basic Machine Casing
 recipes.remove(<IC2:blockMachine>);
 recipes.addShaped(<IC2:blockMachine>, [
-	[<ore:plaTieron>, <ore:plaTieron>, DamascusSteel],
-	[<ore:plaTieron>, DamascusSteel, <ore:plaTieron>],
-	[DamascusSteel, <ore:plaTieron>, <ore:plaTieron>]
+	[<ore:plateiron>, <ore:plateiron>, DamascusSteel],
+	[<ore:plateiron>, DamascusSteel, <ore:plateiron>],
+	[DamascusSteel, <ore:plaTieron>, <ore:plateiron>]
 ]);
 // Allow AOBD Iridium to work
 recipes.removeShaped(<IC2:itemOreIridium>);
@@ -474,5 +474,4 @@ recipes.addShaped(<SolarExpansion:photovoltaicCell>, [
 	[<ore:nuggetLapis>, <ore:nuggetLapis>, <ore:nuggetLapis>],
 	[<ore:nuggetIron>, <ore:nuggetIron>, <ore:nuggetIron>]
 ]);
-
 print("MetallurgyInt END");
